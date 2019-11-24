@@ -1,7 +1,8 @@
 clear all;
 close all;
 
-dataDir = '~/Research/Data/srfnet/dataset';
+% dataDir = '~/Research/Data/srfnet/dataset';
+dataDir = 'C:\Users\armon\Documents\Research\Data\srfnet\kitti\dataset'
 % seq = 5; % most interesting, 2761 points
 seq = 7; % less intersting, 1101 points
 % seq = 9; % less interesting 1591 points
