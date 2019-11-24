@@ -4,7 +4,7 @@ connBlock = zeros(conn-1, conn);
 connBlock(:, 1) = -1;
 connBlock(:, 2:end) = eye(conn-1);
 
-numBlocks = floor(numPoints / stride);
+numBlocks = floor((numPoints - (conn-1)) / stride);
 
 modelHeight = numBlocks * (conn-1);
 modelWidth = numPoints;
@@ -20,7 +20,10 @@ for b=0:(numBlocks-1)
     A(i:i+dh, j:j+dw) = connBlock;
 
 end
-A = A(:, 1:numPoints);
 
-% A = kron(A, eye(3));
+A0 = sparse(1, modelWidth);
+A0(1, 1) = 1;
+A = [A0; A];
+
+A = kron(A, eye(3));
 

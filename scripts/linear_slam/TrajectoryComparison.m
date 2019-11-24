@@ -2,13 +2,28 @@ clear all;
 close all;
 
 % dataDir = '~/Research/Data/srfnet/dataset';
-dataDir = 'C:\Users\armon\Documents\Research\Data\srfnet\kitti\dataset'
+dataDir = 'C:\Users\armon\Documents\Research\Data\srfnet\kitti\dataset';
 % seq = 5; % most interesting, 2761 points
 seq = 7; % less intersting, 1101 points
 % seq = 9; % less interesting 1591 points
 
-groundTruth = loadGroundTruthTrajectory(dataDir, seq);
-fprintf('Trajectory Length = %d\n', size(groundTruth, 1));
+translationsFile = 'C:\Users\armon\Documents\Research\Data\srfnet\translations.txt';
 
+
+groundTruth = loadGroundTruthTrajectory(dataDir, seq);
+numPoints = size(groundTruth, 1);
+fprintf('Trajectory Length = %d\n', numPoints);
+
+
+t = loadTranslationsArray(translationsFile);
+A = linearOdometryModel(numPoints, 4, 1);
+x = A \ t;
+estimated = reshape(x, 3, [])';
+
+% figure;
+% hold on;
+figure;
 plot(groundTruth(:, 3), groundTruth(:, 1), '-r.');
+figure;
+plot(estimated(:, 3), estimated(:, 1), '-b.');
 axis equal
