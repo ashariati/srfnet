@@ -1,4 +1,9 @@
-Repo Breakdown:
+# SRFNet
+A neural network architecture for super resolving extremely low-resolution optical flow for ego motion estimation.
+
+Corresponding publication can be found [here](https://ieeexplore.ieee.org/abstract/document/8962229).
+
+## Repo Breakdown:
 
     -- scripts: Contains matlab and python scripts for processing the different
             raw datasets we work with
@@ -52,16 +57,9 @@ Repo Breakdown:
 
 
 
+## Installation
 
-        
-            
-
-
-
-
-
-
-1) Setup correlation_package:
+    Setup correlation_package:
 
     cd sr-pwc/correlation_package
     python setup.py install
