@@ -3,7 +3,7 @@ A neural network architecture for super resolving extremely low-resolution optic
 
 Corresponding publication can be found [here](https://ieeexplore.ieee.org/abstract/document/8962229).
 
-## Repo Breakdown:
+## Repo Breakdown
 
     - scripts: Contains matlab and python scripts for processing the different
             raw datasets we work with
