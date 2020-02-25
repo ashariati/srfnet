@@ -5,7 +5,7 @@ Corresponding publication can be found [here](https://ieeexplore.ieee.org/abstra
 
 ## Repo Breakdown:
 
-    -- scripts: Contains matlab and python scripts for processing the different
+    - scripts: Contains matlab and python scripts for processing the different
             raw datasets we work with
 
         -- data: Scripts for generating rotation-compensated windows of kitti,
@@ -13,11 +13,11 @@ Corresponding publication can be found [here](https://ieeexplore.ieee.org/abstra
 
         -- visualization: Scripts for visualizing derotated windows
 
-    -- svo_matlab: Matlab implementation of inverse-compositional lucas kanade
+    - svo_matlab: Matlab implementation of inverse-compositional lucas kanade
         optical flow, which was originally intended to work in tandem with
         a gradient super resolution network
 
-    -- sr-pwc: Python (3.5.5) package for all the code used in our paper. Runs on
+    - sr-pwc: Python (3.5.5) package for all the code used in our paper. Runs on
         Pytorch 1.0.1.post2, CudNN 7402, numpy version 1.14.6
 
         -- correlation_package : NVIDIA CUDA code for cost volume computation
